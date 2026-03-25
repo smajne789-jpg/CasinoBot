@@ -1,7 +1,3 @@
-# Telegram Casino Bot (aiogram) — FULL UPGRADE
-# ===========================================
-# pip install aiogram aiosqlite aiohttp
-
 import os
 import random
 import asyncio
