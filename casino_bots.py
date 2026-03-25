@@ -257,13 +257,11 @@ async def odd_game(msg: types.Message):
         win = bet * 2
         await update_balance(msg.from_user.id, win)
         result = f"Выигрыш {win}$ ({roll})"
-        await msg.answer(f"🎲 {roll}
-✅ {win}$")
+        await msg.answer(f"🎲 {roll} ✅ {win}$")
     else:
         await update_balance(msg.from_user.id, -bet)
         result = f"Проигрыш ({roll})"
-        await msg.answer(f"🎲 {roll}
-❌")
+        await msg.answer(f"🎲 {roll} ❌")
 
     await log_bet(msg.from_user.id, "Нечёт x2", bet, result)
 
@@ -276,13 +274,11 @@ async def seven(msg: types.Message):
         win = bet * 5
         await update_balance(msg.from_user.id, win)
         result = f"Выигрыш {win}$ ({d1}+{d2})"
-        await msg.answer(f"🎲 {d1}+{d2}
-✅ {win}$")
+        await msg.answer(f"🎲 {d1}+{d2} ✅ {win}$")
     else:
         await update_balance(msg.from_user.id, -bet)
         result = f"Проигрыш ({d1}+{d2})"
-        await msg.answer(f"🎲 {d1}+{d2}
-❌")
+        await msg.answer(f"🎲 {d1}+{d2} ❌")
 
     await log_bet(msg.from_user.id, "Ровно 7 x5", bet, result)
 
