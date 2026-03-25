@@ -244,8 +244,7 @@ async def even_game(msg: types.Message):
     else:
         await update_balance(msg.from_user.id, -bet)
         result = f"Проигрыш (выпало {roll})"
-        await msg.answer(f"🎲 {roll}
-❌")
+        await msg.answer(f"🎲 {roll} ❌")
 
     await log_bet(msg.from_user.id, "Чёт x2", bet, result)
 
