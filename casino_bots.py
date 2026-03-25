@@ -291,13 +291,11 @@ async def whale(msg: types.Message):
         win = bet * 100
         await update_balance(msg.from_user.id, win)
         result = f"JACKPOT {win}$ (100)"
-        await msg.answer(f"🐳 {num}
-💰 {win}$")
+        await msg.answer(f"🐳 {num} 💰 {win}$")
     else:
         await update_balance(msg.from_user.id, -bet)
         result = f"Проигрыш ({num})"
-        await msg.answer(f"🐳 {num}
-❌")
+        await msg.answer(f"🐳 {num} ❌")
 
     await log_bet(msg.from_user.id, "🐳 x100", bet, result)
 
