@@ -221,13 +221,12 @@ async def log_bet(user_id, game, bet, result):
         return
     try:
         await bot.send_message(
-            BET_CHANNEL_ID,
-            f"🎰 Ставка
-👤 {user_id}
-🎮 {game}
+    BET_CHANNEL_ID,
+    f"""🧾 Ставка
+📌 {game}
 💰 {bet}$
-📊 {result}"
-        )
+📊 {result}"""
+)
     except:
         pass
 
