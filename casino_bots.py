@@ -240,8 +240,7 @@ async def even_game(msg: types.Message):
         win = bet * 2
         await update_balance(msg.from_user.id, win)
         result = f"Выигрыш {win}$ (выпало {roll})"
-        await msg.answer(f"🎲 {roll}
-✅ {win}$")
+        await msg.answer(f"🎲 {roll} ✅ {win}$")
     else:
         await update_balance(msg.from_user.id, -bet)
         result = f"Проигрыш (выпало {roll})"
